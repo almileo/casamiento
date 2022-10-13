@@ -46,6 +46,10 @@ section.ceremonia-fiesta {
   padding-top: 1rem;
 }
 
+.confirmar-asistencia {
+  margin: 90px 0;
+}
+
 section.ceremonia-fiesta:after {
   background-image: none;
   position: absolute;
@@ -143,4 +147,15 @@ section.instagram .hashtag {
 
 section.footer .col-acciones-footer ul a {
   color: var(--color-2);
+}
+
+.spotify {
+  margin-top: 2em;
+  margin-bottom: 2em;
+  width: 20em;
+}
+
+.nombres {
+  position: relative;
+  right: 40px;
 }
