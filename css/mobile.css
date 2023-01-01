@@ -5,6 +5,7 @@ section.ceremonia-fiesta .anim-fiesta {
 }
 
 @media only screen and (max-width: 767px) {
+
   section.portada .content-portada h1 {
     color: var(--color-1);
     font-family: var(--fuente-1);
@@ -72,7 +73,8 @@ section.ceremonia-fiesta .anim-fiesta {
   section.portada .content-portada span.fecha {
     font-size: 25px;
     margin-bottom: 20px;
-    padding-top: 9rem;
+    /* padding-top: 9rem; */
+    margin-top: 0;
   }
   section.fiesta {
     padding-top: 00%;
@@ -109,6 +111,10 @@ section.footer h4 {
   width: 100%;
   text-align: center;
   font-size: 65px;
+}
+
+.footer {
+  margin-bottom: 120px;
 }
 
 .spotify {

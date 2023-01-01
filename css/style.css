@@ -3,13 +3,25 @@
   --color-2: #81948B;
   --color-3: #C6D7CF;
   --color-4: #EFEDE7;
-  --color-5: #FAF7F3;
+  --color-5: #faf7f300;
   --color-6: #868686;
   --color-7: #BFA880;
-  --fuente-1: 'Parisienne', cursive;
+  --fuente-1: 'Antic Slab', cursive;
   --fuente-2: 'Open Sans', sans-serif;
   --fuente-3: 'Cookie', cursive;
 }
+
+/* body {
+  visibility: visible; 
+  z-index: -100; 
+  position: fixed; 
+  top: 0px; 
+  left: 0px; 
+  overflow: hidden; 
+  transform: translate3d(0px, 0px, 0px); 
+  height: 900px; 
+  width: 1540px;
+} */
 
 .boton {
   background: #fff;
@@ -34,6 +46,7 @@ section.fiesta {
 }
 
 section.ceremonia-fiesta {
+  background-image: none;
   padding-bottom: 0%;
   position: relative;
 }
@@ -72,14 +85,14 @@ section.ceremonia-fiesta:after {
   height: 100%;
   width: 100%;
   bottom: 0;
-  background-image: url(https://fixdate.io/modelo-invitacion/65/img/lineas02.svg);
+  background-image: none;
 }
 section.instagram:before {
-  background-image: url(https://fixdate.io/modelo-invitacion/65/img/lineas02.svg);
+  background-image: none;
 }
 
 section.instagram:after {
-  background-image: url(https://fixdate.io/modelo-invitacion/30/img/img_ondas06.svg);
+  background-image: none;
 }
 
 section.portada .box-nombres-fecha-portada h1 span {
@@ -103,7 +116,12 @@ section.cuenta-regresiva .box-aros {
   background-size: contain;
   position: absolute;
   z-index: 99;
-  top: -200px
+  top: -200px;
+  background-color: transparent;
+}
+
+h3, .cere {
+  color: white !important;
 }
 
 section.fiesta .item-fiesta .content-item-fiesta {
@@ -111,13 +129,14 @@ section.fiesta .item-fiesta .content-item-fiesta {
 }
 
 section.portada::after {
-  background-image: url(https://fixdate.io/modelo-invitacion/30/img/img_ondas01.svg);
+  background-image: none;
 }
 
 section.portada .content-portada span.fecha {
   font-size: 25px;
   margin-bottom: 20px;
   padding-top: 3rem;
+  margin-top: 12rem;
 }
 
 section.regalos {
@@ -131,6 +150,13 @@ section.instagram {
   padding-top: 10%;
   padding-bottom: 10%;
   position: relative;
+}
+
+section.instagram::after {
+  padding-top: 10%;
+  padding-bottom: 10%;
+  position: relative;
+  background-image: none;
 }
 
 section.footer {
