@@ -11,7 +11,7 @@
   --fuente-3: 'Cookie', cursive;
 }
 
-/* body {
+body {
   visibility: visible; 
   z-index: -100; 
   position: fixed; 
@@ -21,7 +21,7 @@
   transform: translate3d(0px, 0px, 0px); 
   height: 900px; 
   width: 1540px;
-} */
+}
 
 .boton {
   background: #fff;

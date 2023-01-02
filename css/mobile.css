@@ -6,6 +6,16 @@ section.ceremonia-fiesta .anim-fiesta {
 
 @media only screen and (max-width: 767px) {
 
+  .anim-anillos, .anim-fiesta {
+    display: none !important;
+    visibility: hidden !important;
+  }
+
+  .hide-anim {
+    display: none;
+    visibility: hidden;
+  }
+
   section.portada .content-portada h1 {
     color: var(--color-1);
     font-family: var(--fuente-1);
@@ -73,7 +83,7 @@ section.ceremonia-fiesta .anim-fiesta {
   section.portada .content-portada span.fecha {
     font-size: 25px;
     margin-bottom: 20px;
-    /* padding-top: 9rem; */
+    padding-top: 9rem;
     margin-top: 0;
   }
   section.fiesta {
@@ -85,7 +95,7 @@ section.ceremonia-fiesta .anim-fiesta {
     background-image: url(https://fixdate.io/modelo-invitacion/65/img/lineas02.svg);
     position: absolute;
     content: '';
-    /* background-size: contain !important; */
+    background-size: contain !important;
     background-repeat: no-repeat;
     background-position: top center;
     height: 100%;
@@ -96,7 +106,7 @@ section.ceremonia-fiesta .anim-fiesta {
     background-image: url(https://fixdate.io/modelo-invitacion/30/img/img_ondas06.svg);
     position: absolute;
     content: '';
-    /* background-size: contain !important; */
+    background-size: contain !important;
     background-repeat: no-repeat;
     background-position: bottom center;
     height: 100%;
