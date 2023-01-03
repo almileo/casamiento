@@ -539,9 +539,7 @@
 
       <div class="modal-footer">
         <button type="button" id="sendSugerenciaCancion" class="boton">sugerir canción</button>
-        <!-- <a class="boton" href="https://open.spotify.com/playlist/5l1kDrxjIk8oN8gf7c40TO?si=q9n9tNlcTzGthKztkqiQCw&pt=a8dded8377475c36641b4db7879e5518" target="_blank">sugerir canción</a> -->
       </div>
-
 
     </div>
   </div>
@@ -1309,34 +1307,35 @@
   <script>
     // Abrir modal
     $('body').on('click', 'a.confirmar-asistencia', function(e) {
+      window.location.href = 'https://docs.google.com/forms/d/e/1FAIpQLSdpW4IXNBV1tfQME0N_X8Rb8t7jxYiR0BRknAuuS7z0XTLeEw/viewform?vc=0&c=0&w=1&flr=0'
 
-      e.preventDefault();
+      // e.preventDefault();
 
-      // Remuevo mensajes de error anteriores
-      $("#error-form").remove();
+      // // Remuevo mensajes de error anteriores
+      // $("#error-form").remove();
 
-      var evento = $(this).attr('data-evento');
+      // var evento = $(this).attr('data-evento');
 
-      $('#eventoAsistencia').val(evento);
-
-
-      if (evento == 'Fiesta') {
-        var titleModalAsistencia = lang_titleModalAsistenciaFiesta;
-        var rutaImgModalAsistencia = _pathProducto + 'img/img_circuloFiesta.svg';
-      }
-
-      if (evento == 'Ceremonia') {
-        var titleModalAsistencia = lang_titleModalAsistenciaCeremonia;
-        var rutaImgModalAsistencia = _pathProducto + 'img/img_circuloCeremonia.svg';
-      }
-
-      $('#modalAsistencia .modal-title').text(titleModalAsistencia);
-      $('#modalAsistencia .img-top-modal img').attr('src', rutaImgModalAsistencia);
+      // $('#eventoAsistencia').val(evento);
 
 
-      $('#modalAsistencia').modal({
-        backdrop: 'static'
-      })
+      // if (evento == 'Fiesta') {
+      //   var titleModalAsistencia = lang_titleModalAsistenciaFiesta;
+      //   var rutaImgModalAsistencia = _pathProducto + 'img/img_circuloFiesta.svg';
+      // }
+
+      // if (evento == 'Ceremonia') {
+      //   var titleModalAsistencia = lang_titleModalAsistenciaCeremonia;
+      //   var rutaImgModalAsistencia = _pathProducto + 'img/img_circuloCeremonia.svg';
+      // }
+
+      // $('#modalAsistencia .modal-title').text(titleModalAsistencia);
+      // $('#modalAsistencia .img-top-modal img').attr('src', rutaImgModalAsistencia);
+
+
+      // $('#modalAsistencia').modal({
+      //   backdrop: 'static'
+      // })
 
     });
 
@@ -1606,7 +1605,6 @@
 
     // Enviar sugerencia
     $('body').on('click', '#sendSugerenciaCancion', function(e) {
-      console.log('e: ', e);
       window.location.href = "https://open.spotify.com/playlist/5l1kDrxjIk8oN8gf7c40TO?si=q9n9tNlcTzGthKztkqiQCw&pt=a8dded8377475c36641b4db7879e5518"
       // if (isOkSugerirCancion()) //Form bien validado
       // {
