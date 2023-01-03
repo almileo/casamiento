@@ -26,6 +26,7 @@ body {
 .boton {
   background: #fff;
   color: var(--color-2);
+  margin-bottom: 250px;
 }
 
 section.ceremonia-fiesta .addeventatc .nameBtn {

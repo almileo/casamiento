@@ -258,7 +258,7 @@
 
           <p>Cual es la canción que no debe faltar en la playlist de la fiesta?</p>
 
-          <a href="#" class="boton sugerir-cancion">Sugerir canción</a>
+          <a href="https://open.spotify.com/playlist/5l1kDrxjIk8oN8gf7c40TO?si=q9n9tNlcTzGthKztkqiQCw&pt=a8dded8377475c36641b4db7879e5518" target="_blank" class="boton sugerir-cancion">Sugerir canción</a>
 
         </div>
       </div>
@@ -378,7 +378,7 @@
           </li>
 
           <li>
-            <a href="#" class="sugerir-cancion">Sugerir canción</a>
+            <a href="https://open.spotify.com/playlist/5l1kDrxjIk8oN8gf7c40TO?si=q9n9tNlcTzGthKztkqiQCw&pt=a8dded8377475c36641b4db7879e5518"  target="_blank" class="sugerir-cancion">Sugerir canción</a>
           </li>
 
           <li>
@@ -509,7 +509,7 @@
   </div>
 </div>
     <!-- Modal sugerir cancion-->
-    <div id="modalSugerirCancion" class="modal fade" tabindex="-1">
+<div id="modalSugerirCancion" class="modal fade" tabindex="-1">
   <div class="modal-dialog modal-lg modal-dialog-centered">
     <div class="modal-content">
 
@@ -526,45 +526,20 @@
       </div>
 
       <div class="modal-header">
-
         <h5 class="modal-title">Sugerir Canción</h5>
-
       </div>
 
       <div class="modal-body">
 
-        <div class="formulario-content">
-
-          <form id="formSugerirCancion" action="">
-
-            <div class="form-group">
-              <input type="text" class="form-control" id="nombreSugerencia" name="nombre" placeholder="Tu nombre">
-            </div>
-
-            <div class="form-group">
-              <input type="text" class="form-control" id="descripcionSugerencia" name="descripcion" placeholder="Nombre de cancion y autor">
-            </div>
-
-            <div class="form-group">
-              <input type="text" class="form-control" id="linkSugerencia" name="link" placeholder="Si lo desea ingrese el link de youtube, spotify, etc.">
-            </div>
-
-
-            <input type="hidden" name="invitacion" value="">
-            <input type="hidden" name="token" value="">
-            <input type="hidden" name="lang" value="es">
-            <input type="hidden" name="country" value="ar">
-
-          </form>
-
+        <div class="msj-content d-flex flex-column justify-content-center">
+          <p>Agrega la canción que quieras sugerirnos a nuestra Lista de Spotify</p>
         </div>
-
-        <div class="msj-content d-flex flex-column justify-content-center"></div>
 
       </div>
 
       <div class="modal-footer">
-        <button type="button" id="sendSugerenciaCancion" class="boton">Sugerir canción</button>
+        <button type="button" id="sendSugerenciaCancion" class="boton">sugerir canción</button>
+        <!-- <a class="boton" href="https://open.spotify.com/playlist/5l1kDrxjIk8oN8gf7c40TO?si=q9n9tNlcTzGthKztkqiQCw&pt=a8dded8377475c36641b4db7879e5518" target="_blank">sugerir canción</a> -->
       </div>
 
 
@@ -1631,86 +1606,84 @@
 
     // Enviar sugerencia
     $('body').on('click', '#sendSugerenciaCancion', function(e) {
+      console.log('e: ', e);
+      window.location.href = "https://open.spotify.com/playlist/5l1kDrxjIk8oN8gf7c40TO?si=q9n9tNlcTzGthKztkqiQCw&pt=a8dded8377475c36641b4db7879e5518"
+      // if (isOkSugerirCancion()) //Form bien validado
+      // {
 
-      e.preventDefault();
+      //   // Load and disabled buttom.
+      //   $("#sendSugerenciaCancion").text(lang_enviandoSugerencia + "...");
+      //   $("#sendSugerenciaCancion").prop("disabled", true);
 
+      //   // Obtengo el Form.
+      //   var formulario = $("#formSugerirCancion")[0];
 
-      if (isOkSugerirCancion()) //Form bien validado
-      {
-
-        // Load and disabled buttom.
-        $("#sendSugerenciaCancion").text(lang_enviandoSugerencia + "...");
-        $("#sendSugerenciaCancion").prop("disabled", true);
-
-        // Obtengo el Form.
-        var formulario = $("#formSugerirCancion")[0];
-
-        // Obtengo los datos del formulario
-        var datos = new FormData(formulario);
+      //   // Obtengo los datos del formulario
+      //   var datos = new FormData(formulario);
 
 
-        // Visualizar como viajan los datos
-        for (var pair of datos.entries()) {
-          console.log(pair[0] + ", " + pair[1]);
-        }
+      //   // Visualizar como viajan los datos
+      //   for (var pair of datos.entries()) {
+      //     console.log(pair[0] + ", " + pair[1]);
+      //   }
 
 
-        // Envio con fetch los datos mediante POST
-        fetch(_pathApp + "producto/fetchs/sugerir-cancion.php", {
-            method: "POST",
-            body: datos
-          })
-          // Promesas fetch
-          .then(res => res.json())
-          .then(data => {
+      //   // Envio con fetch los datos mediante POST
+      //   fetch(_pathApp + "producto/fetchs/sugerir-cancion.php", {
+      //       method: "POST",
+      //       body: datos
+      //     })
+      //     // Promesas fetch
+      //     .then(res => res.json())
+      //     .then(data => {
 
-            // Si recibo error 
-            if (data.error === true) {
+      //       // Si recibo error 
+      //       if (data.error === true) {
 
-              $("#sendSugerenciaCancion").text(lang_sugerirCancion);
-              $("#sendSugerenciaCancion").prop("disabled", false);
+      //         $("#sendSugerenciaCancion").text(lang_sugerirCancion);
+      //         $("#sendSugerenciaCancion").prop("disabled", false);
 
-              // Imprimo el error
-              $('#formSugerirCancion').after('<span id="error-form">' + data.desc + '</span>');
-            }
+      //         // Imprimo el error
+      //         $('#formSugerirCancion').after('<span id="error-form">' + data.desc + '</span>');
+      //       }
 
-            // Si no hay error 
-            if (data.error === false) {
+      //       // Si no hay error 
+      //       if (data.error === false) {
 
-              $("#sendSugerenciaCancion").text(lang_sugerirCancion);
-              $("#sendSugerenciaCancion").prop("disabled", false);
-
-
-              // Oculto elementos del form y reseteo
-              $('#formSugerirCancion')[0].reset();
-              $('#modalSugerirCancion .formulario-content, #modalSugerirCancion .modal-footer, #modalSugerirCancion h5').hide();
+      //         $("#sendSugerenciaCancion").text(lang_sugerirCancion);
+      //         $("#sendSugerenciaCancion").prop("disabled", false);
 
 
-              // Acomodo el css para centrar mensaje
-              $('#modalSugerirCancion .modal-body').addClass('fix-height');
+      //         // Oculto elementos del form y reseteo
+      //         $('#formSugerirCancion')[0].reset();
+      //         $('#modalSugerirCancion .formulario-content, #modalSugerirCancion .modal-footer, #modalSugerirCancion h5').hide();
 
 
-              // Muestro mensaje de exito
-
-              $('#modalSugerirCancion .msj-content').html(
-                "<h5>" + lang_sugerirCancionMsjExito_1 + "</h5><p>" + lang_sugerirCancionMsjExito_2 + "</p>"
-              ).show();
+      //         // Acomodo el css para centrar mensaje
+      //         $('#modalSugerirCancion .modal-body').addClass('fix-height');
 
 
-              // Cierro modal y vuelvo a activar form
-              setTimeout(function() {
+      //         // Muestro mensaje de exito
 
-                $('#modalSugerirCancion').modal('hide');
-                $('#modalSugerirCancion .formulario-content, #modalSugerirCancion .modal-footer, #modalSugerirCancion h5').show();
-                $('#modalSugerirCancion .msj-content').html('').hide();
-                $('#modalSugerirCancion .modal-body').removeClass('fix-height');
+      //         $('#modalSugerirCancion .msj-content').html(
+      //           "<h5>" + lang_sugerirCancionMsjExito_1 + "</h5><p>" + lang_sugerirCancionMsjExito_2 + "</p>"
+      //         ).show();
 
-              }, 4000);
 
-            }
+      //         // Cierro modal y vuelvo a activar form
+      //         setTimeout(function() {
 
-          });
-      }
+      //           $('#modalSugerirCancion').modal('hide');
+      //           $('#modalSugerirCancion .formulario-content, #modalSugerirCancion .modal-footer, #modalSugerirCancion h5').show();
+      //           $('#modalSugerirCancion .msj-content').html('').hide();
+      //           $('#modalSugerirCancion .modal-body').removeClass('fix-height');
+
+      //         }, 4000);
+
+      //       }
+
+      //     });
+      // }
 
 
     });
