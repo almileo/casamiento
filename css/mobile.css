@@ -11,6 +11,11 @@ section.ceremonia-fiesta .anim-fiesta {
     visibility: hidden !important;
   }
 
+  .dress {
+    object-fit: contain;
+    width: 300px;
+  }
+
   .hide-anim {
     display: none;
     visibility: hidden;

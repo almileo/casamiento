@@ -29,6 +29,10 @@ body {
   margin-bottom: 250px;
 }
 
+.dress {
+  width: 200px;
+}
+
 section.ceremonia-fiesta .addeventatc .nameBtn {
   color: var(--color-2);
 }
